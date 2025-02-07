@@ -1,5 +1,7 @@
 import { cargarCartas } from "./componentes/tablero/tablero.js";
 cargarCartas();
+import { ContHeader } from "./componentes/header/header.js";
+
 
 let DOM = document.querySelector("#root");
  
@@ -9,6 +11,7 @@ contenedor.className = "contenedor";
 
 let divheader = document.createElement ('div');
 divheader.className = "div-header"
+divheader.appendChild(ContHeader()); 
 contenedor.appendChild (divheader);
 
 let divprogreso = document.createElement ('div');
@@ -23,7 +26,6 @@ contenedor.appendChild (divtablero);
 let divfooter = document.createElement ('div');
 divfooter.className = "div-footer"
 contenedor.appendChild (divfooter);
-
 
 
 DOM.appendChild(contenedor); 
