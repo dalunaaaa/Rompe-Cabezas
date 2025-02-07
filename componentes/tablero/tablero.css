@@ -8,12 +8,12 @@
 }
 
 .div-Tablero {
-    
+   
     gap: 1rem;
     display: grid;
     margin-top: 150px;
     grid-template-columns: repeat(7, 7rem);
-    grid-template-rows: repeat(3, 9rem);
+    grid-template-rows: repeat(3, 6rem);
     justify-content: center;
     align-items: center;
 }
