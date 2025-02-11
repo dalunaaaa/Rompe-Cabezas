@@ -23,9 +23,20 @@ divtablero.className = "div-tablero"
 divtablero.appendChild(cargarCartas());
 contenedor.appendChild (divtablero);
 
+
 let divfooter = document.createElement ('div');
 divfooter.className = "div-footer"
 contenedor.appendChild (divfooter);
 
 
 DOM.appendChild(contenedor); 
+
+
+let todas_las_cartasDelDOM = document.querySelectorAll('.carta');
+todas_las_cartasDelDOM.forEach(cadaCarta => {
+
+    cadaCarta.addEventListener("click", ()=>{
+        cadaCarta.classList.add("marcado");
+    })
+
+})
