@@ -18,23 +18,47 @@
     align-items: center;
 }
 
+
 .carta {
-    cursor: pointer;
-    background-color: antiquewhite;
-    font-size: 3rem;
-    height: 90px;
-    width: 90px;
-    border: 1px solid black;
-    border-radius: 3px;
+    height: 6rem;
+    width: 5rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    box-shadow: 5px 5px solid black;
 }
-.marcado{
-    background-color: red;
+
+.frente, .reverso {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 15px;
 }
-.carta:hover{
-    border: 1px solid red;
-    transition: 0.3;
+
+.frente {
+    background-color: white;
 }
+
+.reverso {
+    background-color: rgb(197, 181, 192);
+    transform: rotateY(180deg);
+}
+
+.carta.girada {
+    transform: rotateY(180deg);
+}
+
+

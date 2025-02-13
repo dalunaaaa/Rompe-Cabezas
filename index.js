@@ -36,7 +36,8 @@ let todas_las_cartasDelDOM = document.querySelectorAll('.carta');
 todas_las_cartasDelDOM.forEach(cadaCarta => {
 
     cadaCarta.addEventListener("click", ()=>{
-        cadaCarta.classList.add("marcado");
+        cadaCarta.classList.toggle("girada");
     })
 
 })
+
